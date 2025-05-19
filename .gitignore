@@ -1,0 +1,20 @@
+# Ignore development notebooks and docs
+eda/
+docs/
+presentation/
+README.txt
+data/
+
+# Ignore local output
+__pycache__/
+*.log
+*.pyc
+.Trash-0/
+.ipynb_checkpoints/
+
+# Ignore ETL output (local only)
+datamart/
+
+# Ignore system files
+.DS_Store
+.env
