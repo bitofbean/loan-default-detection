@@ -14,9 +14,9 @@ import pyspark.sql.functions as F
 from pyspark.sql.functions import col
 from pyspark.sql.types import StringType, IntegerType, FloatType, DateType
 
-import lab2.label_bronze_table
-import lab2.label_silver_table
-import lab2.label_gold_table
+import label_pipeline.label_bronze_table
+import label_pipeline.label_silver_table
+import label_pipeline.label_gold_table
 
 # to call this script: python bronze_label_store.py --snapshotdate "2023-01-01"
 
@@ -42,7 +42,7 @@ def main(snapshotdate):
         os.makedirs(bronze_lms_directory)
 
     # run data processing
-    utils.data_processing_bronze_table.process_bronze_table(date_str, bronze_lms_directory, spark)
+    label_pipeline.label_bronze_table.process_bronze_table(date_str, bronze_lms_directory, spark)
     
     # end spark session
     spark.stop()

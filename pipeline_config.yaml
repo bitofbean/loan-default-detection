@@ -1,16 +1,14 @@
-run_bronze: false
-run_silver: false
-run_gold: false
-run_label: false
+run_bronze: true
+run_silver: true
+run_gold: true
+run_label: true
 run_label_cleanup: true
-run_join: false
-
 
 datasets:
-  clickstream: false
-  attributes: false
-  financials: false
-  loan_daily: false
+  clickstream: true
+  attributes: true
+  financials: true
+  loan_daily: true
 
 label_store:
   dpd: 30               
